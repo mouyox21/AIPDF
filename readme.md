@@ -1,132 +1,63 @@
-# Application de Chat MultiPDF
+# PDF Profiler - Développement d'un Assistant IA pour l'Analyse des Documents PDF
 
 ## Introduction
 ------------
-L'application de Chat MultiPDF est une application Python qui vous permet de discuter avec plusieurs documents PDF. Vous pouvez poser des questions sur les PDF en utilisant un langage naturel, et l'application fournira des réponses pertinentes en fonction du contenu des documents. Cette application utilise un modèle de langage pour générer des réponses précises à vos questions. Veuillez noter que l'application ne répondra qu'aux questions liées aux PDF chargés.
+   PDF Profiler est une puissante application Python qui vous permet d'analyser et d'explorer des fichiers PDF de manière approfondie. Vous pouvez extraire des informations pertinentes, générer des statistiques, et même poser des questions en langage naturel sur les PDF chargés. Cette application repose sur un modèle de langage avancé pour vous fournir des réponses précises. Veuillez noter que l'application répondra uniquement aux questions liées aux PDFs que vous avez chargés.
 
-## Comment Ça Marche
+## Fonctionnement
 ------------
 
-![Schéma de l'Application de Chat MultiPDF](./docs/PDF-LangChain.jpg)
+![Schéma de Fonctionnement de PDF Profiler](./docs/PDF-LangChain.jpg)
 
-L'application suit ces étapes pour fournir des réponses à vos questions :
+PDF Profiler suit un processus en plusieurs étapes pour vous offrir une analyse complète de vos fichiers PDF :
 
-1. Chargement des PDF : L'application lit plusieurs documents PDF et extrait leur contenu textuel.
+1. **Chargement des PDF :** L'application lit et analyse vos fichiers PDF, extrayant leur contenu textuel.
 
-2. Fragmentation du Texte : Le texte extrait est divisé en petits fragments qui peuvent être traités efficacement.
+2. **Extraction des Données :** Les données essentielles des PDFs sont extraites et organisées de manière structurée.
 
-3. Modèle de Langage : L'application utilise un modèle de langage pour générer des représentations vectorielles (embeddings) des fragments de texte.
+3. **Statistiques et Profilage :** PDF Profiler génère des statistiques et des profils détaillés des PDFs chargés, vous permettant de mieux comprendre leur contenu.
 
-4. Recherche de Similarités : Lorsque vous posez une question, l'application la compare avec les fragments de texte et identifie les plus similaires sémantiquement.
+4. **Modèle de Langage :** L'application utilise un modèle de langage avancé pour répondre à vos questions et fournir des informations pertinentes.
 
-5. Génération de Réponses : Les fragments sélectionnés sont transmis au modèle de langage, qui génère une réponse en fonction du contenu pertinent des PDFs.
+5. **Réponses aux Questions :** Posez des questions en langage naturel sur les PDFs et obtenez des réponses basées sur leur contenu.
 
 ## Dépendances et Installation
 ----------------------------
-Pour installer l'Application de Chat MultiPDF, suivez ces étapes :
+Pour installer et utiliser PDF Profiler, suivez ces étapes simples :
 
-1. Clonez le dépôt sur votre machine locale.
+1. **Clonez le Répertoire :** Commencez par cloner ce répertoire sur votre machine locale.
 
-2. Installez les dépendances requises en exécutant la commande suivante :
+2. **Installez les Dépendances :** Installez les dépendances requises en exécutant la commande suivante :
    ```
    pip install -r requirements.txt
    ```
 
-3. Obtenez une clé d'API d'OpenAI et ajoutez-la au fichier `.env` dans le répertoire du projet.
+3. **Obtenez une Clé d'API OpenAI :** Vous devez obtenir une clé d'API auprès d'OpenAI et l'ajouter au fichier `.env` dans le répertoire du projet. Voici comment cela doit être fait :
 ```commandline
-OPENAI_API_KEY=your_secrit_api_key
+OPENAI_API_KEY=your_secret_api_key
 ```
 
 ## Utilisation
 -----
-Pour utiliser l'Application de Chat MultiPDF, suivez ces étapes :
+Pour utiliser PDF Profiler efficacement, suivez ces étapes :
 
-1. Assurez-vous d'avoir installé les dépendances requises et ajouté la clé d'API d'OpenAI dans le fichier `.env`.
+1. **Configuration :** Assurez-vous d'avoir installé les dépendances requises et ajouté la clé d'API d'OpenAI dans le fichier `.env`.
 
-2. Exécutez le fichier `main.py` en utilisant la CLI de Streamlit. Exécutez la commande suivante :
+2. **Lancement de l'Application :** Exécutez le fichier `main.py` en utilisant la CLI de Streamlit. Vous pouvez le faire avec la commande suivante :
    ```
-   streamlit run test1.py
+   streamlit run main.py
    ```
 
-3. L'application s'ouvrira dans votre navigateur par défaut, affichant l'interface utilisateur.
+3. **Interface Conviviale :** L'application s'ouvrira automatiquement dans votre navigateur par défaut, vous présentant une interface utilisateur conviviale.
 
-4. Chargez plusieurs documents PDF dans l'application en suivant les instructions fournies.
+4. **Chargement des Documents PDF :** Importez vos fichiers PDF dans l'application en suivant les instructions fournies.
 
-5. Posez des questions en langage naturel sur les PDF chargés en utilisant l'interface de chat.
+5. **Exploration des PDF :** Utilisez PDF Profiler pour extraire des informations, générer des statistiques et poser des questions sur les PDFs chargés.
 
-## Contribution
+## Contributions
 ------------
-Ce dépôt est destiné à des fins éducatives et n'accepte pas d'autres contributions. Il sert de matériel de soutien pour un tutoriel YouTube qui montre comment construire ce projet. N'hésitez pas à utiliser et à améliorer l'application en fonction de vos propres besoins.
+Ce dépôt est principalement destiné à des fins éducatives et ne prend pas en charge les contributions externes. Il sert de matériel de support pour un tutoriel YouTube qui explique comment construire ce projet. Néanmoins, n'hésitez pas à utiliser et à personnaliser l'application en fonction de vos besoins particuliers.
 
 ## Licence
 -------
-L'Application de Chat MultiPDF est publiée sous la [Licence MIT](https://opensource.org/licenses/MIT).
-
-
-
-
-------------------
-# MultiPDF Chat App
-
-
-## Introduction
-------------
-The MultiPDF Chat App is a Python application that allows you to chat with multiple PDF documents. You can ask questions about the PDFs using natural language, and the application will provide relevant responses based on the content of the documents. This app utilizes a language model to generate accurate answers to your queries. Please note that the app will only respond to questions related to the loaded PDFs.
-
-## How It Works
-------------
-
-![MultiPDF Chat App Diagram](./docs/PDF-LangChain.jpg)
-
-The application follows these steps to provide responses to your questions:
-
-1. PDF Loading: The app reads multiple PDF documents and extracts their text content.
-
-2. Text Chunking: The extracted text is divided into smaller chunks that can be processed effectively.
-
-3. Language Model: The application utilizes a language model to generate vector representations (embeddings) of the text chunks.
-
-4. Similarity Matching: When you ask a question, the app compares it with the text chunks and identifies the most semantically similar ones.
-
-5. Response Generation: The selected chunks are passed to the language model, which generates a response based on the relevant content of the PDFs.
-
-## Dependencies and Installation
-----------------------------
-To install the MultiPDF Chat App, please follow these steps:
-
-1. Clone the repository to your local machine.
-
-2. Install the required dependencies by running the following command:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Obtain an API key from OpenAI and add it to the `.env` file in the project directory.
-```commandline
-OPENAI_API_KEY=your_secrit_api_key
-```
-
-## Usage
------
-To use the MultiPDF Chat App, follow these steps:
-
-1. Ensure that you have installed the required dependencies and added the OpenAI API key to the `.env` file.
-
-2. Run the `main.py` file using the Streamlit CLI. Execute the following command:
-   ```
-   streamlit run test1.py
-   ```
-
-3. The application will launch in your default web browser, displaying the user interface.
-
-4. Load multiple PDF documents into the app by following the provided instructions.
-
-5. Ask questions in natural language about the loaded PDFs using the chat interface.
-
-## Contributing
-------------
-This repository is intended for educational purposes and does not accept further contributions. It serves as supporting material for a YouTube tutorial that demonstrates how to build this project. Feel free to utilize and enhance the app based on your own requirements.
-
-## License
--------
-The MultiPDF Chat App is released under the [MIT License](https://opensource.org/licenses/MIT).
+PDF Profiler est publié sous la [Licence MIT](https://opensource.org/licenses/MIT).
