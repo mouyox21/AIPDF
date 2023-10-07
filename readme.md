@@ -45,7 +45,7 @@ Pour utiliser PDF Profiler efficacement, suivez ces étapes :
 
 2. **Lancement de l'Application :** Exécutez le fichier `main.py` en utilisant la CLI de Streamlit. Vous pouvez le faire avec la commande suivante :
    ```
-   streamlit run main.py
+   streamlit run test1.py
    ```
 
 3. **Interface Conviviale :** L'application s'ouvrira automatiquement dans votre navigateur par défaut, vous présentant une interface utilisateur conviviale.
